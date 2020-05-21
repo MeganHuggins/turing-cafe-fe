@@ -1,0 +1,10 @@
+.reservation-card {
+  background: #ffffff;
+  padding:2%;
+  margin-bottom:30px;
+  margin-right: 4%;
+  width: 20%;
+  border: 6px solid rgb(2,128,128);
+  border-radius: 5px;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.65);
+}

@@ -9,14 +9,14 @@ const ReservationsContainer = ({ reservations }) => {
       <ReservationCard
       key={reservation.id}
       resInfo={reservation}
-      />      
+      />
     )
   });
 
   return (
-    <main className='res-card-container'>
+    <section className='res-card-container'>
       {currentReservations}
-    </main>
+    </section>
   );
 }
 
