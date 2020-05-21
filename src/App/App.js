@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { fetchedReservations, postReservations, deleteReservations } from '../apiCalls/apiCalls';
+import { fetchedReservations } from '../apiCalls/apiCalls';
 import ReservationsContainer from '../ReservationsContainer/ReservationsContainer';
 import ReservationForm from '../ReservationForm/ReservationForm';
 
@@ -18,8 +18,8 @@ class App extends Component {
     })
   };
 
-  addNewReservation = (newRes) => {
-    this.setState({ reservations: [...this.state.reservations, newRes]})
+  addNewReservation = (newReservation) => {
+    this.setState({ reservations: [...this.state.reservations, newReservation]})
   }
 
   render() {
