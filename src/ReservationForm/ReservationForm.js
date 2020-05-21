@@ -21,6 +21,7 @@ class ReservationForm extends Component {
     const newReservation = {
       ...this.state
     }
+    this.props.addNewReservation(newReservation);
     this.resetForm();
   };
 
