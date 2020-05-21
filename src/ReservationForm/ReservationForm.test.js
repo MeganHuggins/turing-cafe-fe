@@ -20,4 +20,24 @@ describe('<ReservationForm />', () => {
     expect(submitBtn).toBeInTheDocument();
   });
 
+  it('Should have the correct data values', () => {
+    const { getByText, getByPlaceholderText } = render(<ReservationForm />);
+
+    const nameInput = getByPlaceholderText('Name');
+    const dateInput = getByPlaceholderText('Date');
+    const timeInput = getByPlaceholderText('Time');
+    const numberInput = getByPlaceholderText('Number');
+    const submitBtn = getByText('Make Reservation');
+
+    fireEvent.change(nameInput, {target: {value:'Megan'}});
+    fireEvent.change(dateInput, {target: {value:'7/26'}});
+    fireEvent.change(timeInput, {target: {value:'7:00'}});
+    fireEvent.change(numberInput, {target: {value:'8'}});
+
+    expect(nameInput.value).toBe('Megan');
+    expect(dateInput.value).toBe('7/26');
+    expect(timeInput.value).toBe('7:00');
+    expect(numberInput.value).toBe('8');
+  });
+
 })
