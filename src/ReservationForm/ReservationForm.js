@@ -38,9 +38,9 @@ class ReservationForm extends Component {
     return (
       <form classsName='res-form'>
         <input type='text' placeholder='Name' name='name' value={this.state.name} onChange={this.updateReservation} />
-        <input type='text' placeholder='date' name='date' value={this.state.date} onChange={this.updateReservation} />
-        <input type='text' placeholder='time' name='time' value={this.state.time} onChange={this.updateReservation} />
-        <input type='number' placeholder='number' name='number' value={this.state.number} onChange={this.updateReservation} />
+        <input type='text' placeholder='Date' name='date' value={this.state.date} onChange={this.updateReservation} />
+        <input type='text' placeholder='Time' name='time' value={this.state.time} onChange={this.updateReservation} />
+        <input type='number' placeholder='Number' name='number' value={this.state.number} onChange={this.updateReservation} />
         <button onClick={this.bookReservation}>Make Reservation</button>
       </form>
     )
